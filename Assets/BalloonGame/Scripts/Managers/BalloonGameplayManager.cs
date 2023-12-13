@@ -56,10 +56,7 @@ namespace Classes.Managers
                     break;
 
                 case GameSettingsSO.GameMode.MANUAL:
-                    this.gameSettings.maxLives = 100;
-                    PointsManager.updateScoreboard();
                     /* Do nothing; gameplay is dictated by the clinician. */
-
                     AchievementManager.Instance.HideAchievementList();
                     break;
 
