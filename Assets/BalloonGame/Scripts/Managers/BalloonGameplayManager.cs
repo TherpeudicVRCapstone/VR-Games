@@ -35,7 +35,6 @@ namespace Classes.Managers
         {
             if (SocketClasses.BalloonGameSettingsValues.clinicianIsControlling)
             {
-                Debug.Log("balloonStart = " + SocketClasses.BalloonGameSettingsValues.balloonStart);
                 yield return new WaitUntil(() => SocketClasses.BalloonGameSettingsValues.balloonStart);
             }
 
@@ -85,7 +84,6 @@ namespace Classes.Managers
 
         private void CareerGameMode()
         {
-            Debug.Log("CareerMode Reports: " + SocketClasses.BalloonGameSettingsValues.careerModeLevelToPlay);
             AchievementManager.Instance.HideAchievementList();
             this.StartCoroutine(this.WatchPlayerLives());
             this.setCurrentLevel(Int16.Parse(SocketClasses.BalloonGameSettingsValues.careerModeLevelToPlay));
@@ -218,7 +216,6 @@ namespace Classes.Managers
         /* RefreshBalloonSettings() is a method to apply any new settings the clinician has changed. Should be called on game start as well*/
         public override void  RefreshSettings()
         {
-            Debug.Log("Refreshing, Balloonstart = " + SocketClasses.BalloonGameSettingsValues.balloonStart);
             this.gameSettings.gameMode = (GameSettingsSO.GameMode)Int16.Parse(SocketClasses.BalloonGameSettingsValues.balloonGameMode);
 
             this.gameSettings.spawnPattern = (GameSettingsSO.SpawnPattern)Int16.Parse(SocketClasses.BalloonGameSettingsValues.balloonGamePattern);
@@ -232,15 +229,15 @@ namespace Classes.Managers
             this.gameSettings.floatStrengthModifier = float.Parse(SocketClasses.BalloonGameSettingsValues.speedModifier);
 
             /* Verify game settings are being set. */
-            Debug.Log(this.gameSettings.spawnPattern);
-            Debug.Log(this.gameSettings.handSetting);
-            Debug.Log(this.gameSettings.goal);
-            Debug.Log(this.gameSettings.specialBalloonSpawnChance);
-            Debug.Log(this.gameSettings.maxLives);
-            Debug.Log(this.gameSettings.rightSpawnChance);
-            Debug.Log(this.gameSettings.spawnTime);
-            Debug.Log(this.gameSettings.maxNumBalloonsSpawnedAtOnce);
-            Debug.Log(this.gameSettings.floatStrengthModifier);
+            //Debug.Log(this.gameSettings.spawnPattern);
+            //Debug.Log(this.gameSettings.handSetting);
+            //Debug.Log(this.gameSettings.goal);
+            //Debug.Log(this.gameSettings.specialBalloonSpawnChance);
+            //Debug.Log(this.gameSettings.maxLives);
+            //Debug.Log(this.gameSettings.rightSpawnChance);
+            //Debug.Log(this.gameSettings.spawnTime);
+            //Debug.Log(this.gameSettings.maxNumBalloonsSpawnedAtOnce);
+            //Debug.Log(this.gameSettings.floatStrengthModifier);
         }
 
 
